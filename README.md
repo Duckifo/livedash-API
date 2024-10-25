@@ -112,6 +112,18 @@ end
 
 ```
 
+## more examples
+
+some examples not made to showoff how to use it but how I use it. Might give some
+clarity to some regions.
+
+>pointA to pointB raycast ([source](src/ex-1.lua)) /
+([video example](#debugging))
+
+
+>stress test ([source](src/stress-test.1.lua))
+
+
 ***
 
 # Use Cases
