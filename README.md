@@ -112,9 +112,9 @@ end
 
 ```
 
-## more examples
+## more API examples
 
-some examples not made to showoff how to use it but how I use it. Might give some
+some examples not made to showoff how to use the API but how I use it. Might give some
 clarity to some regions.
 
 >pointA to pointB raycast ([source](src/ex-1.lua)) /
