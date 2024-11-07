@@ -139,3 +139,5 @@ you don't need quit your already running instance and relaunch.
 ![e](videos/dbug.ex-1.gif)
 
 ***
+
+> rip monke, will be missed. removed from store :(
