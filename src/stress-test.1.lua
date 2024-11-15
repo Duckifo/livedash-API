@@ -15,12 +15,12 @@ local components = {
 }
 
 --	construct everything
-local devpanelConstructor = require(script.Parent["Duckie's devpanel tool"].devpanel)
+local dashboardConstructor = require(script.Parent["Duckie's dashboard tool"].dashboard)
 for i=1, panels do
-	local devpanel = devpanelConstructor.new("title")
+	local dashboard = dashboardConstructor.new("title")
 	for componentID, amount in components do
 		for componentIndex=1, amount do
-			devpanel:newComponent(componentID)
+			dashboard:newComponent(componentID)
 		end
 	end
 end

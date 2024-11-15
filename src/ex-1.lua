@@ -28,7 +28,7 @@ beam.Attachment1 = at1
 
 
 --[[		setup gui		]]
-local devpanelConstructor = require(script.Parent["Duckie's devpanel tool"].devpanel)
+local dashboardConstructor = require(script.Parent["Duckie's dashboard tool"].dashboard)
 local rs = game:GetService("RunService")
 
 local StartingPointA = Vector3.zero + 		(Vector3.yAxis * 3)
@@ -37,25 +37,25 @@ local StartingPointB = Vector3.new(3,0,0) + (Vector3.yAxis * 3)
 local pointA = StartingPointA
 local pointB = StartingPointB
 
-local devpanel = devpanelConstructor.new()
-local MoveCameraEnabled = devpanel:newComponent("toggle", {label="mv cam", data=true})
+local dashboard = dashboardConstructor.new()
+local MoveCameraEnabled = dashboard:newComponent("toggle", {label="mv cam", data=true})
 
-devpanel:newComponent("divider", {height=12})
+dashboard:newComponent("divider", {height=12})
 
 local slider_param = {data=1, range=NumberRange.new(0, 5)}
-local A_X = devpanel:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointA X"}}) )
-local A_Y = devpanel:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointA Y"}}) )
-local A_Z = devpanel:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointA Z"}}) )
+local A_X = dashboard:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointA X"}}) )
+local A_Y = dashboard:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointA Y"}}) )
+local A_Z = dashboard:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointA Z"}}) )
 
-devpanel:newComponent("divider", {height=12})
+dashboard:newComponent("divider", {height=12})
 
-local B_X = devpanel:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointB X"}}) )
-local B_Y = devpanel:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointB Y"}}) )
-local B_Z = devpanel:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointB Z"}}) )
+local B_X = dashboard:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointB X"}}) )
+local B_Y = dashboard:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointB Y"}}) )
+local B_Z = dashboard:newComponent("slider", setmetatable(slider_param, {__index = {label = "pointB Z"}}) )
 
-devpanel:newComponent("divider", {height=15})
+dashboard:newComponent("divider", {height=15})
 
-local raycast = devpanel:newComponent("button", {label="raycast"} )
+local raycast = dashboard:newComponent("button", {label="raycast"} )
 
 
 --[[		functions		]]

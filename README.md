@@ -1,12 +1,19 @@
-# Duckie's devpanel tool (0.01)
+# Duckie's livedash API (0.01)
 ![ex-1](videos/ex-1.gif)
 
+<blockquote style="border-left: 4px solid yellow; padding-left: 10px; foreground:">
+	If you see any references to <code>devpanel</code> (source code/documentation)
+	then it is referring to dashboard, as the project has seen some name changes!
+</blockquote>
+
+
 ## Overview
-This library for roblox luau that allows developers to quickly create simple GUI panels to tweak values 
-while running. For instance you can use it for quickly tweaking movement values in game.
-while also being relatively expandable with you being able to [create custom components](docs/component-creation.md). As of October 2024 
-there are currently 3 "official" modules `(toggle, button, slider)` but 
-Im planing on adding more in the future like `(input_field, number_field)`
+This API is for roblox luau and allows developers to quickly create simple GUI panels to tweak values 
+while running. For instance you can use it for quickly tweaking run speed in game.
+while also being relatively expandable with you being able to [create custom components](docs/component-creation.md).
+
+More so, its not perfect and I would appreciate reports of any problems that might occur.
+If you have any ideas of changes, I am happy to try them!
 ***
 # API Usage
 
@@ -36,19 +43,19 @@ any user made components. More info on how to use these are in the [API examples
 ## API examples
 I would recommend looking at the [table of components](#table-of-built-in-components) before reading more about the examples
 
-### create a devpanel instance
+### create a dashboard instance
 ```lua
---  get the devpanel Constructor
-local devpanelConstructor = require(script.Parent["Duckie's devpanel tool"].devpanel)
+--  get the dashboard Constructor
+local dashboardConstructor = require(script.Parent["Duckie's dashboard tool"].dashboard)
 
---  construct a devpanel 
-local devpanel = devpanelConstructor.new()
+--  construct a dashboard 
+local dashboard = dashboardConstructor.new()
 ```
-### creating and adding components to devpanel
+### creating and adding components to dashboard
 ```lua
 --  create and add component
 --  (toggle button) :newComponent takes firstly ID then a parameter
-local toggle_button = devpanel:newComponent("toggle", {label="toggle"})
+local toggle_button = dashboard:newComponent("toggle", {label="toggle"})
 ```
 ### read data from components
 ```lua
@@ -59,8 +66,8 @@ local toggle_button_state = toggle_button.data
 
 ### bind callbacks (events)
 ```lua
--- create and add button to devpanel
-local button = devpanel:newComponent("button", {label="button"})
+-- create and add button to dashboard
+local button = dashboard:newComponent("button", {label="button"})
 
 -- bind function to .onClicked
 button.onClicked = function()
@@ -83,21 +90,21 @@ local slider_param = {
 
 
 -- create the slider and pass the parameter
-local slider = devpanel:newComponent("slider", slider_param)
+local slider = dashboard:newComponent("slider", slider_param)
 ```
 
 ### general example
-this example show a simple devpanel setup to create a part with some customizability
+this example show a simple dashboard setup to create a part with some customizability
 ```lua
--- create the devpanel
-local devpanelConstructor = require(script.Parent["Duckie's devpanel tool"].devpanel)
-local devpanel = devpanelConstructor.new()
+-- create the dashboard
+local dashboardConstructor = require(script.Parent["Duckie's dashboard tool"].dashboard)
+local dashboard = dashboardConstructor.new()
 
 -- create and add all components
-local anchord_toggle = devpanel:newComponent("toggle", {label="anchor"})
-local transparent_toggle = devpanel:newComponent("toggle", {label="transp"})
-local size_slider = devpanel:newComponent("slider", {data=3, range=NumberRange.new(0, 10)})
-local create_button = devpanel:newComponent("button", {label="create"})
+local anchord_toggle = dashboard:newComponent("toggle", {label="anchor"})
+local transparent_toggle = dashboard:newComponent("toggle", {label="transp"})
+local size_slider = dashboard:newComponent("slider", {data=3, range=NumberRange.new(0, 10)})
+local create_button = dashboard:newComponent("button", {label="create"})
 
 -- bind the .onClicked to a function
 create_button.onClicked = function()
