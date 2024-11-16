@@ -10,7 +10,7 @@ metadata template source code can be found [here](/src/componentMetadataTemp-1.l
 or in roblox *(~/dialogComponents/metadata/.componentMetadataTemplate)*
 
 
-So the metadata is what the panel reads from when :newComponent() is called.
+So the metadata is what the API reads from when :newComponent() is called.
 Its used for assigning `config, componentID, module (component)` mostly but also
 includes `version, publisher, lastUpdated` these are not used for the construction
 components.
@@ -42,6 +42,7 @@ the *"component module script"* (as i will be referring to) constructs and updat
 
 - [construction of component](#component-construction-template-file)
 - [functionality of component](#component-construction--functionality)
+- [ascetics of component](#component-ascetics)
 
 
 ### component construction (template file)
@@ -154,3 +155,13 @@ end
 
 >! I recommend looking at how other components are structured, one of the most simple
 is the divider component and can be found *(~/dialogComponents/components/divider)*
+
+### component ascetics
+
+As the dashboard follows a color theme, it needs to change the color of the components.
+The way it does this is with tags, (find some more information in the APIs *~/theme/themeType* )
+
+To set the color of a component you add a tag to it with where it should be applied
+then the color that it should be separated by a "#", for instance:
+ To set the background of a frame in your component to red you would tag it with
+ `bg#red` or foreground `fg#red`

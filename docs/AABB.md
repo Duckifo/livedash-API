@@ -27,5 +27,5 @@ local cursor_overlapping: boolean = AABB_LIB.AABB_Mouse_Overlap(AABB_Box)
 
 ## more
 
-there is also a function to pass tow AABBs and 
+there is also a function to pass two AABBs and 
 check if they overlap *``.AABB_Overlap()``*
