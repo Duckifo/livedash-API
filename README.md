@@ -10,20 +10,29 @@
 ## Overview
 This API is for roblox luau and allows developers to quickly create simple GUI panels to tweak values 
 while running. For instance you can use it for quickly tweaking run speed in game.
-while also being relatively expandable with you being able to [create custom components](docs/component-creation.md).
+while also being relatively expandable with having the possibility of being able to [create custom components](docs/component-creation.md).
 
 More so, its not perfect and I would appreciate feedback!
 If you have any ideas of changes, I am happy to try them!
 
-
+>*livedash* also supports themes, there are currently 4 themes! Want to switch theme check 
+out [documentation]() for it!
 
 ## Installation
 
 Its a super simple installation!
 
-- go to the release page and install the ``*.rblx`` file.
+- Go to the release page and install the ``*.rbxm`` file.
 - Open roblox studio them rightclick in explorer where you want to import it, select ``Insert from file`` (select the downloaded file)
-- create a new local script and start using it! Check out [Api Usage](#api-usage)
+- For more customization look in the Config module script!
+- Create a new local script and start using it! Check out [Api Usage](#api-usage)
+
+## performance
+
+Of what i know its a really lightweight API, Ive conducted some benchmarks
+> idle with the 
+([source of ex-1](src/ex-1.lua)) it runs at a frame time of `0.056 ms` while toggled (press f13) it runs at a
+frame time of only `0.001ms`
 
 ***
 # API Usage
