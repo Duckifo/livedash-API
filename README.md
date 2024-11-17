@@ -16,7 +16,7 @@ More so, its not perfect and I would appreciate feedback!
 If you have any ideas of changes, I am happy to try them!
 
 >*livedash* also supports themes, there are currently 4 themes! Want to switch theme check 
-out [documentation]() for it!
+out [documentation](/docs/themes.md) for it!
 
 ## Installation
 
