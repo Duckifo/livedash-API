@@ -22,11 +22,7 @@ out [documentation]() for it!
 
 Its a super simple installation!
 
-- Go to the release page and install the ``*.rbxm`` file.
-- Open roblox studio them rightclick in explorer where you want to import it, select ``Insert from file`` (select the downloaded file)
-- For more customization look in the Config module script!
-- Create a new local script and start using it! Check out [Api Usage](#api-usage)
-
+- Go to the release page and follow the instructions there!
 ## performance
 
 Of what i know its a really lightweight API, Ive conducted some benchmarks
@@ -74,7 +70,7 @@ I would recommend looking at the [table of components](#table-of-built-in-compon
 ### create a dashboard instance
 ```lua
 --  get the dashboard Constructor
-local dashboardConstructor = require(script.Parent["Duckie's dashboard tool"].dashboard)
+local dashboardConstructor = require(script.Parent["livedash-API"].dashboard)
 
 --  construct a dashboard 
 local dashboard = dashboardConstructor.new()
@@ -125,7 +121,7 @@ local slider = dashboard:newComponent("slider", slider_param)
 this example show a simple dashboard setup to create a part with some customizability
 ```lua
 -- create the dashboard
-local dashboardConstructor = require(script.Parent["Duckie's dashboard tool"].dashboard)
+local dashboardConstructor = require(script.Parent["livedash-API"].dashboard)
 local dashboard = dashboardConstructor.new()
 
 -- create and add all components
