@@ -1,4 +1,4 @@
-# Component Creation (0.01)
+# Component Creation (1.0.0)
 
 Components are created in two steeps [`metadata`](#metadata) & [`component`](#component-construction--functionality) module scripts.
 

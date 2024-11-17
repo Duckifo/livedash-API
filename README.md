@@ -1,4 +1,4 @@
-# Duckie's livedash API (0.01)
+# livedash-API (1.0.0)
 ![ex-1](videos/ex-1.gif)
 
 <blockquote style="border-left: 4px solid yellow; padding-left: 10px; foreground:">
@@ -12,14 +12,33 @@ This API is for roblox luau and allows developers to quickly create simple GUI p
 while running. For instance you can use it for quickly tweaking run speed in game.
 while also being relatively expandable with you being able to [create custom components](docs/component-creation.md).
 
-More so, its not perfect and I would appreciate reports of any problems that might occur.
+More so, its not perfect and I would appreciate feedback!
 If you have any ideas of changes, I am happy to try them!
+
+
+
+## Installation
+
+Its a super simple installation!
+
+- go to the release page and install the ``*.rblx`` file.
+- Open roblox studio them rightclick in explorer where you want to import it, select ``Insert from file`` (select the downloaded file)
+- create a new local script and start using it! Check out [Api Usage](#api-usage)
+
 ***
 # API Usage
 
+## overview
+
+This API uses a simple interface, creating a dashboard then adding components with the `:newComponent()`
+function. Passing parameters to components (could be seen as settings for the components).
+Components are vertically stacked GUI vise, being stacked in the order they are added in the script.
+
 ## table of built in components
-these are "built in" components that you can access with this library without adding 
+these are "built in" components that you can access without adding 
 any user made components. More info on how to use these are in the [API examples](#api-examples)
+
+> ! all of these also have a label parameter except divider
 
 #### static
 | component ID | Description                     | Parameters                                                               |
@@ -28,17 +47,17 @@ any user made components. More info on how to use these are in the [API examples
 | divider      | A free space between components | `{ height: int }`                                                        |
 
 #### read-only
-| component ID | Description                | Parameters                            | returns                                  |
-| ------------ | -------------------------- | ------------------------------------- | ---------------------------------------- |
-| toggle       | Toggle / switch            | `{ data: bool }`                      | `{data: bool, onToggled: BindableEvent}` |
-| slider       | Gives a value from a range | `{ data: float, range: NumberRange }` | `{data: float, onSlid: BindableEvent}`   |
+| component ID | Description    | Parameters        | returns |
+| ------------ | -------------- | ----------------- | ------- |
+| button       | can be pressed | `{ label: string }` | `{ onClicked: callback func }` |
+
 
 #### input
 | component ID | Description                | Parameters                            | returns                                  |
 | ------------ | -------------------------- | ------------------------------------- | ---------------------------------------- |
 | toggle       | Toggle / switch            | `{ data: bool }`                      | `{data: bool, onToggled: BindableEvent}` |
 | slider       | Gives a value from a range | `{ data: float, range: NumberRange }` | `{data: float, onSlid: BindableEvent}`   |
-
+| number       | a number field             | `{ data: float}`                      | `{data: float}`                          |
 
 ## API examples
 I would recommend looking at the [table of components](#table-of-built-in-components) before reading more about the examples
